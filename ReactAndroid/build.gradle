@@ -305,6 +305,7 @@ def buildReactNdkLib = tasks.register("buildReactNdkLib", Exec) {
     commandLine(getNdkBuildFullPath(),
             "NDK_DEBUG=" + (nativeBuildType.equalsIgnoreCase("debug") ? "1" : "0"),
             "NDK_PROJECT_PATH=null",
+            "V=1",
             "NDK_APPLICATION_MK=$projectDir/src/main/jni/Application.mk",
             "NDK_OUT=" + temporaryDir,
             "NDK_LIBS_OUT=$buildDir/react-ndk/all",
